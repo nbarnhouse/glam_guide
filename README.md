@@ -20,3 +20,7 @@
 
 ## Support
 
+Team: 
+- Chad David
+- Nicole Barnhouse
+
