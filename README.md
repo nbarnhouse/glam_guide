@@ -20,6 +20,10 @@
 
 ## Support
 
-Team: 
+Team:
+
 - Chad David
+- Jennifer Her
 - Nicole Barnhouse
+- Shobha Chejara
+- Yuh-Boh Feng
