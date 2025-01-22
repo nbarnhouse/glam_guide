@@ -9,6 +9,14 @@ For brides planning their weddings in Cancún, Mexico, who need a safe, reliable
 - [npm](https://www.npmjs.com)
 - [Expo Go](https://docs.expo.dev)
 - [Homebrew](https://brew.sh)
+- [Expo Authentication](https://docs.expo.dev/develop/authentication/)
+
+Other ideas:
+
+- [Expo SQLite](https://docs.expo.dev/versions/latest/sdk/sqlite/)
+- [Expo ScreenOrientation](https://docs.expo.dev/versions/latest/sdk/screen-orientation/)
+- [Expo Haptics](https://docs.expo.dev/versions/latest/sdk/haptics/)
+- [Color Themes](https://docs.expo.dev/develop/user-interface/color-themes/)
 
 ## Installation (Development)
 
@@ -20,6 +28,12 @@ For brides planning their weddings in Cancún, Mexico, who need a safe, reliable
 
 - brew install node
 - brew install watchman
+- npm install @react-navigation/stack
+- [npx expo install expo-localization](https://docs.expo.dev/versions/latest/sdk/localization/)
+- [npx expo install i18n-js](https://docs.expo.dev/guides/localization/)
+- [npx expo install expo-calendar](https://docs.expo.dev/versions/latest/sdk/calendar/)
+- [npx expo install expo-sms](https://docs.expo.dev/versions/latest/sdk/sms/)
+- [npx expo install expo-splash-screen](https://docs.expo.dev/versions/latest/sdk/splash-screen/)
 
 ## File Structure
 
