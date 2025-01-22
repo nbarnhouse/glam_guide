@@ -36,12 +36,3 @@ export default function RootLayout() {
     </Stack>
   );
 }
-
-// <View
-//   style={{
-//     width: "90%",
-//     alignItems: "flex-end",
-//   }}
-// >
-//   <Link href="/login">Forgot Password?</Link>
-// </View>

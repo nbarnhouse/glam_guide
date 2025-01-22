@@ -25,6 +25,8 @@ const LoginScreen = () => {
     // Proceed with the login (validate user credentials)
     // For now, just show an alert
     Alert.alert("Login Button Pressed");
+
+    //Clear email, password and toggle switch
     setEmail("");
     setPassword("");
     setIsEnabled(false);
@@ -34,6 +36,7 @@ const LoginScreen = () => {
     <SafeAreaView style={styles.container}>
       <View>
         <Text style={styles.title}>GlamGuide</Text>
+        {/* Text: Cancun Mexico & The Riviera Maya */}
         <Text style={styles.subtitle}>{i18n.t("location")}</Text>
       </View>
 
@@ -43,15 +46,6 @@ const LoginScreen = () => {
         {/* Text: Your complete Wedding Experience */}
         <Text style={styles.text}>{i18n.t("weddingExperience")}</Text>
       </View>
-
-      <LoginFields
-        email={email}
-        setEmail={setEmail}
-        password={password}
-        setPassword={setPassword}
-        isEnabled={isEnabled}
-        toggleSwitch={toggleSwitch}
-      />
 
       <TouchableOpacity
         style={[
@@ -77,7 +71,8 @@ const LoginScreen = () => {
         </Text>
       </TouchableOpacity>
 
-      <Text style={{ marginTop: -20 }}>Auto Translation: On</Text>
+      {/* NOTE: Need to update this text with libre Translation API details */}
+      <Text style={{ marginTop: -20 }}>Auto Translation: Off</Text>
       <Link href="/sign-up">
         Don't have an account?
         <Text style={{ fontWeight: "bold" }}> Sign Up</Text>
