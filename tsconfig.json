@@ -11,7 +11,7 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts",
-    "components/LoginFields.tsx",
+    "components/LoginFields.jsx",
     "app/_layout.jsx",
     "app/index.jsx",
     "app/sign-up.jsx",

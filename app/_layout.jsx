@@ -1,11 +1,22 @@
-import { Stack } from "expo-router";
+import { Stack, useRouter } from "expo-router";
 import { TouchableOpacity, Text } from "react-native";
+import { useEffect } from "react";
 
 export default function RootLayout() {
+  const router = useRouter();
+
+  useEffect(() => {
+    console.log("RootLayout re-rendered");
+  }, []);
+
+  const handleForgotPassword = () => {
+    console.log("Navigating to forgot-password");
+    router.push("/forgot-password");
+  };
+
   return (
     <Stack>
       <Stack.Screen name="index" options={{ headerTitle: "" }} />
-      <Stack.Screen name="sign-in" />
       <Stack.Screen
         name="login"
         options={{
@@ -18,8 +29,8 @@ export default function RootLayout() {
               style={{
                 flexDirection: "row",
               }}
+              //onPress={handleForgotPassword}
             >
-              {/* Back Arrow is handled by `headerTintColor` */}
               <Text
                 style={{
                   marginLeft: 5,
@@ -33,6 +44,8 @@ export default function RootLayout() {
           ),
         }}
       />
+      <Stack.Screen name="sign-up" options={{ headerShown: false }} />
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
     </Stack>
   );
 }

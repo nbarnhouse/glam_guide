@@ -1,3 +1,4 @@
+import LoginFields from "@/components/LoginFields";
 import { Link } from "expo-router";
 import { Text, View } from "react-native";
 
