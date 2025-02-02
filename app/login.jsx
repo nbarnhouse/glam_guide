@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { Link, useRouter } from "expo-router";
 import LoginFields from "@/components/LoginFields";
-import i18n from "@/i18n.js";
+import i18n from "@/language/i18n";
 
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
