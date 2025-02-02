@@ -1,7 +1,7 @@
 import { getLocales } from "expo-localization";
 import { I18n } from "i18n-js"; // Correct import from i18n-js
-import en from "./locales/en.json";
-import es from "./locales/es.json";
+import en from "../locales/en.json";
+import es from "../locales/es.json";
 
 // Set the translations
 const translations = {
