@@ -7,24 +7,24 @@ import {
   TouchableOpacity,
   Alert,
 } from "react-native";
-import { Link } from "expo-router";
+import { Link, useRouter } from "expo-router";
 import LoginFields from "@/components/LoginFields";
-import i18n from "@/i18n.js";
+import i18n from "@/language/i18n";
 
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
+  const router = useRouter();
 
   const handleLogin = () => {
-    if (email === "" || password === "") {
-      Alert.alert("Error", "Please fill in both fields.");
-      return;
-    }
+    // if (email === "" || password === "") {
+    //   Alert.alert("Error", "Please fill in both fields.");
+    //   return;
+    // }
     // Proceed with the login (validate user credentials)
-    // For now, just show an alert
-    Alert.alert("Login Button Pressed");
+    router.push("/artistCalendar");
 
     //Clear email, password and toggle switch
     setEmail("");
@@ -39,13 +39,21 @@ const LoginScreen = () => {
         {/* Text: Cancun Mexico & The Riviera Maya */}
         <Text style={styles.subtitle}>{i18n.t("location")}</Text>
       </View>
-
       <View>
         {/* Text: Trusted Hair & Makeup Professionals for */}
         <Text style={styles.text}>{i18n.t("trustedProfessionals")}</Text>
         {/* Text: Your complete Wedding Experience */}
         <Text style={styles.text}>{i18n.t("weddingExperience")}</Text>
       </View>
+
+      <LoginFields
+        email={email}
+        setEmail={setEmail}
+        password={password}
+        setPassword={setPassword}
+        isEnabled={isEnabled}
+        toggleSwitch={toggleSwitch}
+      />
 
       <TouchableOpacity
         style={[
@@ -70,7 +78,6 @@ const LoginScreen = () => {
           Login
         </Text>
       </TouchableOpacity>
-
       {/* NOTE: Need to update this text with libre Translation API details */}
       <Text style={{ marginTop: -20 }}>Auto Translation: Off</Text>
       <Link href="/sign-up">
