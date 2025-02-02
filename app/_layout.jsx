@@ -6,7 +6,7 @@ export default function RootLayout() {
   const router = useRouter();
 
   useEffect(() => {
-    console.log("RootLayout re-rendered");
+    console.log("Index Screen RootLayout re-rendered");
   }, []);
 
   const handleForgotPassword = () => {
@@ -16,7 +16,10 @@ export default function RootLayout() {
 
   return (
     <Stack>
-      <Stack.Screen name="index" options={{ headerTitle: "" }} />
+      <Stack.Screen
+        name="index"
+        options={{ headerTitle: "", headerShown: false }}
+      />
       <Stack.Screen
         name="login"
         options={{
@@ -29,7 +32,7 @@ export default function RootLayout() {
               style={{
                 flexDirection: "row",
               }}
-              //onPress={handleForgotPassword}
+              onPress={handleForgotPassword}
             >
               <Text
                 style={{
@@ -46,6 +49,7 @@ export default function RootLayout() {
       />
       <Stack.Screen name="sign-up" options={{ headerShown: false }} />
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen name="forgot-password" options={{ headerShown: false }} />
     </Stack>
   );
 }
