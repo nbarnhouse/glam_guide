@@ -3,6 +3,7 @@ import AntDesign from "@expo/vector-icons/AntDesign";
 import Feather from "@expo/vector-icons/Feather";
 import Octicons from "@expo/vector-icons/Octicons";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 
 export default function TabLayout() {
   return (
@@ -24,6 +25,8 @@ export default function TabLayout() {
           tabBarLabel: () => null,
           tabBarIcon: () => (
             <Feather name="message-square" size={24} color="#59534C" />
+            //<MaterialCommunityIcons name="message-badge-outline" size={24} color="black" />
+            //alternate icon with message nofication
           ),
         }}
       />

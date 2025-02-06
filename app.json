@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "glam_guide",
+    "name": "GlamGuide",
     "slug": "glam_guide",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,8 +13,8 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        // "foregroundImage": "./assets/images/nb_favicon.png",
+        // "backgroundColor": "#ffffff"
       }
     },
     "web": {
