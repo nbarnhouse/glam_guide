@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const pool = require("./pool");
 
-// Test route
+// Test route for DB connectivity
 router.get("/test", async (req, res) => {
   try {
     const result = await pool.query("SELECT NOW()");
@@ -12,7 +12,7 @@ router.get("/test", async (req, res) => {
   }
 });
 
-// GET
+// GET all messages
 router.get("/", (req, res) => {
   const dbQuery = "SELECT message_text FROM messages;";
 

@@ -21,8 +21,10 @@ Other ideas:
 ## Installation (Development)
 
 1. Install Expo Go on your mobile device.
-2. Run `npx expo start` in your terminal
-3. Open App in Expo Go App, run on web, and/or run on ios/android simulators.
+2. Create local DB named glam_guide.
+3. Run node server.js in your terminal (backend directory).
+4. Run `npx expo start` in a new terminal.
+5. Open App in Expo Go App, run on web, and/or run on ios/android simulators.
 
 ## Options if not already installed
 
@@ -39,6 +41,7 @@ Other ideas:
 
 - `app/` contains the visual and navigation app files
 - `assets/` contains app images, icons, and other media
+- `backend/` contains all node, pool, router info files
 - `components/` contains reusable code snippets of common elements
 - `constants/` contains app-wide standard non-chaning files
 - `android/` contains android specific app files
@@ -48,6 +51,8 @@ Other ideas:
 
 - React Native
 - Expo
+- Node.js
+- PostgreSQL
 
 ## Acknowledgement
 
