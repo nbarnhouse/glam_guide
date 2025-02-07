@@ -31,6 +31,7 @@ Other ideas:
 - brew install node
 - brew install watchman
 - npm install @react-navigation/stack
+- npm install -g eas-cli
 - [npx expo install expo-localization](https://docs.expo.dev/versions/latest/sdk/localization/)
 - [npx expo install i18n-js](https://docs.expo.dev/guides/localization/)
 - [npx expo install expo-calendar](https://docs.expo.dev/versions/latest/sdk/calendar/)

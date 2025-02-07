@@ -1,60 +1,86 @@
 import { useEffect, useState } from "react";
-import { View, Text, TextInput, Button, FlatList } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  Button,
+  FlatList,
+  StyleSheet,
+  TouchableOpacity,
+} from "react-native";
+import { useRoute } from "@react-navigation/native";
 import axios from "axios";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useRouter } from "expo-router";
+import Ionicons from "@expo/vector-icons/Ionicons";
+import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
+import FontAwesome from "@expo/vector-icons/FontAwesome";
 
-const ArtistMessageSummary = () => {
+export default function ArtistMessageSummary() {
+  const router = useRouter();
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
 
-  // Hardcoded user ID for testing
-  const userId = 1; // Simulated logged-in user
-
-  useEffect(() => {
-    fetchMessages();
-  }, []);
-
-  const fetchMessages = () => {
-    axios
-      .get("http://localhost:3001/messages")
-      .then((response) => setMessages(response.data))
-      .catch((error) => console.error("Error fetching messages:", error));
-  };
-
-  const sendMessage = () => {
-    axios
-      .post("http://localhost:3001/messages", {
-        sender_id: userId, // Replace with actual user ID
-        receiver_id: 2, // Replace with actual recipient ID
-        message_text: newMessage,
-      })
-      .then(() => {
-        setNewMessage("");
-        fetchMessages();
-      })
-      .catch((error) => console.error("Error sending message:", error));
-  };
-
   return (
     <SafeAreaView>
-      <FlatList
-        data={messages}
-        keyExtractor={(item) => item.id.toString()}
-        renderItem={({ item }) => (
-          <Text>
-            {item.sender_id}: {item.message_text}
-          </Text>
-        )}
-      />
-      <TextInput
-        value={newMessage}
-        onChangeText={setNewMessage}
-        placeholder="Type a message..."
-        style={{ borderWidth: 1, padding: 10, marginBottom: 10 }}
-      />
-      <Button title="Send" onPress={sendMessage} />
+      <View style={styles.header_container}>
+        <TouchableOpacity onPress={() => router.back()}>
+          <Ionicons name="chevron-back-outline" size={32} color="#161616" />
+        </TouchableOpacity>
+
+        <Text>Auto Translation: Off</Text>
+
+        <TouchableOpacity>
+          <FontAwesome name="pencil-square-o" size={32} color="#161616" />
+        </TouchableOpacity>
+      </View>
+      <View style={styles.divider}></View>
+      <View style={styles.message_container}>
+        <FontAwesome5
+          style={styles.icon}
+          name="user-circle"
+          size={31}
+          color="#59534C"
+        />
+
+        <View style={styles.message_background}>
+          <Text style={styles.title}>NAME</Text>
+          <View style={styles.divider}>
+            <Text>Content after the divider</Text>
+          </View>
+        </View>
+
+        <TouchableOpacity onPress={() => router.push("/artistMessageDetail")}>
+          <Ionicons name="chevron-forward" size={24} color="#59534C" />
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
-};
+}
 
-export default ArtistMessageSummary;
+const styles = StyleSheet.create({
+  header_container: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
+  },
+  title: {
+    fontSize: 43,
+    color: "#59534C",
+  },
+  divider: {
+    height: 2,
+    width: "100%",
+    backgroundColor: "lightgray",
+    //marginTop: 30,
+  },
+  message_container: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-around",
+    //backgroundColor: "violet",
+  },
+  message_background: {
+    //backgroundColor: "pink",
+  },
+});
