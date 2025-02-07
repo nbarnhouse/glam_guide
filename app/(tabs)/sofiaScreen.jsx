@@ -15,11 +15,19 @@ const styles = StyleSheet.create({
     borderColor: 'red',
     borderWidth: 2,
   },
-    detailsInfo: {
+    detailsInfoLeft: {
     flex: 1,
-    flexDirection: 'row',
+    flexDirection: 'column',
+    borderColor: 'green',
+    borderWidth: 1,
+    paddingLeft: 20,
+  },
+    detailsInfoRight: {
+    flex: 1,
+    flexDirection: 'column',
     borderColor: 'red',
-    borderWidth: 0,
+    borderWidth: 1,
+    marginLeftLeft: 100,
   },
   messagebtn: {
     flex: 1,
@@ -42,6 +50,12 @@ const styles = StyleSheet.create({
     borderColor: 'blue',
     borderWidth: 0,
   },
+  fontBold: {
+    fontWeight: 'bold',
+  },
+  paddingTop15: {
+    paddingTop: 15,
+  },
   aboreto: {
     fontFamily: Platform.select({
       android: 'Aboreto-Regular',
@@ -57,18 +71,31 @@ export default function SofiaScreen() {
           source={require('./../../assets/images/Sofia_Makeup_1.png')}
         />
       </View>
+
       <Text style={[styles.upcoming]}> Upcoming </Text>
       <Text style={[styles.firstName]}> SOFIA </Text>
 
       <View style={[styles.details]}>
-        <View style={[styles.detailsInfo]}></View>
-        <View style={[styles.detailsInfo]}></View>
+        <View style={[styles.detailsInfoLeft]}>
+          <Text style={[styles.fontBold]}>Wedding Date:</Text>
+          <Text style={[styles.fontBold, styles.paddingTop15]}>Service Location:</Text>
+          <Text>Moon Palace Cancun</Text>
+          <Text>Chetumal Km 340,</Text>
+          <Text>Riviera Maya, 77500</Text>
+          <Text>Zona Hoterlera</Text>
+          <Text style={[styles.fontBold, styles.paddingTop15]}>Arrival Time:</Text>
+          <Text style={[styles.fontBold]}>End Time:</Text>
+          <Text style={[styles.fontBold, styles.paddingTop15]}>Contact #</Text>
+          <Text style={[styles.fontBold, styles.paddingTop15]}>Expected Earnings</Text>
+          <Text style={[styles.fontBold, styles.paddingTop15]}>Payout Date</Text>
+        </View>
+
+        <View style={[styles.detailsInfoRight]}></View>
       </View>
 
       <View style={[styles.messagebtn]}>
         <Text>btn</Text>
       </View>
     </SafeAreaView>
-    
   );
 }
