@@ -29,6 +29,11 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginLeftLeft: 100,
   },
+  textAndImage: {
+    flexDirection: 'row',
+    borderColor: 'purple',
+    borderWidth: 2,
+  },
   messagebtn: {
     flex: 1,
     borderColor: 'blue',
@@ -56,6 +61,9 @@ const styles = StyleSheet.create({
   paddingTop15: {
     paddingTop: 15,
   },
+  underline: {
+    textDecorationLine: 'underline',
+  },
   aboreto: {
     fontFamily: Platform.select({
       android: 'Aboreto-Regular',
@@ -72,17 +80,19 @@ export default function SofiaScreen() {
         />
       </View>
 
+      {/* Top Row */}
       <Text style={[styles.upcoming]}> Upcoming </Text>
       <Text style={[styles.firstName]}> SOFIA </Text>
 
+      {/* Left Column */}
       <View style={[styles.details]}>
         <View style={[styles.detailsInfoLeft]}>
           <Text style={[styles.fontBold]}>Wedding Date:</Text>
           <Text style={[styles.fontBold, styles.paddingTop15]}>Service Location:</Text>
-          <Text>Moon Palace Cancun</Text>
-          <Text>Chetumal Km 340,</Text>
-          <Text>Riviera Maya, 77500</Text>
-          <Text>Zona Hoterlera</Text>
+            <Text>Moon Palace Cancun</Text>
+            <Text>Chetumal Km 340,</Text>
+            <Text>Riviera Maya, 77500</Text>
+            <Text>Zona Hoterlera</Text>
           <Text style={[styles.fontBold, styles.paddingTop15]}>Arrival Time:</Text>
           <Text style={[styles.fontBold]}>End Time:</Text>
           <Text style={[styles.fontBold, styles.paddingTop15]}>Contact #</Text>
@@ -90,9 +100,26 @@ export default function SofiaScreen() {
           <Text style={[styles.fontBold, styles.paddingTop15]}>Payout Date</Text>
         </View>
 
-        <View style={[styles.detailsInfoRight]}></View>
+        {/* Right Column */}
+        <View style={[styles.detailsInfoRight]}>
+          <Text>August 5th, 2025</Text>
+          <View style={[styles.textAndImage]}>
+            <Image
+    
+            />
+            <Text style={[styles.underline]}>Directions</Text>
+          </View>
+          
+          <Text>07:00 am</Text>
+          <Text>13:00 pm</Text>
+          <Text style={[styles.underline]}>52 +1 998 151 7878</Text>
+          <Text>$1050.00 USD</Text>
+          <Text>($21,560.00 MX)</Text>
+          <Text>December 12th, 2024</Text>
+        </View>
       </View>
 
+      {/* Bottom Row */}
       <View style={[styles.messagebtn]}>
         <Text>btn</Text>
       </View>
