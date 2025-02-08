@@ -16,11 +16,11 @@ const styles = StyleSheet.create({
     borderWidth: 2,
   },
     detailsInfoLeft: {
-    flex: 1,
+    flex: .8,
     flexDirection: 'column',
     borderColor: 'green',
     borderWidth: 1,
-    paddingLeft: 20,
+    paddingLeft: 30,
   },
     detailsInfoRight: {
     flex: 1,
@@ -61,6 +61,9 @@ const styles = StyleSheet.create({
   paddingTop15: {
     paddingTop: 15,
   },
+  paddingTop80: {
+    marginTop: 80,
+  },
   underline: {
     textDecorationLine: 'underline',
   },
@@ -96,7 +99,8 @@ export default function SofiaScreen() {
           <Text style={[styles.fontBold, styles.paddingTop15]}>Arrival Time:</Text>
           <Text style={[styles.fontBold]}>End Time:</Text>
           <Text style={[styles.fontBold, styles.paddingTop15]}>Contact #</Text>
-          <Text style={[styles.fontBold, styles.paddingTop15]}>Expected Earnings</Text>
+          <Text style={[styles.fontBold, styles.paddingTop15]}>Expected</Text>
+          <Text style={[styles.fontBold]}>Earnings</Text>
           <Text style={[styles.fontBold, styles.paddingTop15]}>Payout Date</Text>
         </View>
 
@@ -104,18 +108,18 @@ export default function SofiaScreen() {
         <View style={[styles.detailsInfoRight]}>
           <Text>August 5th, 2025</Text>
           <View style={[styles.textAndImage]}>
-            <Image
-    
-            />
-            <Text style={[styles.underline]}>Directions</Text>
+
+            <Image />
+
+            <Text style={[styles.underline, styles.paddingTop15]}>Directions</Text>
           </View>
           
-          <Text>07:00 am</Text>
+          <Text style={[styles.paddingTop80]}>07:00 am</Text>
           <Text>13:00 pm</Text>
-          <Text style={[styles.underline]}>52 +1 998 151 7878</Text>
-          <Text>$1050.00 USD</Text>
+          <Text style={[styles.underline, styles.paddingTop15]}>52 +1 998 151 7878</Text>
+          <Text style={[styles.paddingTop15]}>$1050.00 USD</Text>
           <Text>($21,560.00 MX)</Text>
-          <Text>December 12th, 2024</Text>
+          <Text style={[styles.paddingTop15]}>December 12th, 2024</Text>
         </View>
       </View>
 
