@@ -1,9 +1,23 @@
-import { Platform, Image, View, StyleSheet, Text } from "react-native";
+import { Platform, Image, TouchableOpacity, Button, View, StyleSheet, Text } from "react-native";
 import React, { useState, useEffect } from 'react';
 import { SafeAreaView } from "react-native-safe-area-context";
-import * as Font from 'expo-font';
+import Feather from '@expo/vector-icons/Feather';
+import EvilIcons from '@expo/vector-icons/EvilIcons';
 
 const styles = StyleSheet.create({
+    button: {
+    width: 200,   // Set button width
+    height: 60,   // Set button height
+    backgroundColor: 'blue',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 10, // Optional: for rounded corners
+  },
+  text: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
   container: {
     flex: 1,
     borderColor: 'red',
@@ -13,35 +27,54 @@ const styles = StyleSheet.create({
     flex: 5,
     flexDirection: 'row',
     borderColor: 'red',
-    borderWidth: 2,
+    borderWidth: 0,
   },
-    detailsInfoLeft: {
+  detailsInfoLeft: {
     flex: .8,
     flexDirection: 'column',
     borderColor: 'green',
-    borderWidth: 1,
+    borderWidth: 0,
     paddingLeft: 30,
+    marginLeft: 10,
   },
-    detailsInfoRight: {
+  detailsInfoRight: {
     flex: 1,
     flexDirection: 'column',
     borderColor: 'red',
-    borderWidth: 1,
-    marginLeftLeft: 100,
+    borderWidth: 0,
+    marginLeft: 0,
+    marginRight: 30,
+    paddingRight: 30,
   },
   textAndImage: {
     flexDirection: 'row',
     borderColor: 'purple',
-    borderWidth: 2,
+    borderWidth: 0,
   },
-  messagebtn: {
-    flex: 1,
-    borderColor: 'blue',
-    borderWidth: 2,
+  textAlignR: {
+    textAlign: 'right',
+  },
+  justifyContentE: {
+    justifyContent: 'flex-end',
+  },
+  btnBottom: {
+    borderColor: 'red',
+    borderWidth: 1,
+    width: 220,   // Set button width
+    height: 35,   // Set button height
+    marginLeft: '25%',
+    justifyContent: 'center',
+    borderRadius: 10,
+    overflow: 'hidden', // Needed for borderRadius to work
   },
   image1: {
     width: '100%',
     height: 270,
+  },
+  infoIcon: {
+    position: 'absolute',
+    left: -20,
+    top: 17,
   },
   upcoming: {
     textAlign: 'center',
@@ -61,8 +94,14 @@ const styles = StyleSheet.create({
   paddingTop15: {
     paddingTop: 15,
   },
-  paddingTop80: {
-    marginTop: 80,
+  paddingTop25: {
+    paddingTop: 25,
+  },
+  paddingTop10: {
+    paddingTop: 10,
+  },
+  paddingTop60: {
+    marginTop: 60,
   },
   underline: {
     textDecorationLine: 'underline',
@@ -99,33 +138,41 @@ export default function SofiaScreen() {
           <Text style={[styles.fontBold, styles.paddingTop15]}>Arrival Time:</Text>
           <Text style={[styles.fontBold]}>End Time:</Text>
           <Text style={[styles.fontBold, styles.paddingTop15]}>Contact #</Text>
-          <Text style={[styles.fontBold, styles.paddingTop15]}>Expected</Text>
+
+          <View style={[styles.textAndImage]}>
+            <Feather style={[styles.infoIcon]} name="info" size={15} color="black"/>
+            <Text style={[styles.fontBold, styles.paddingTop15]}>Expected</Text>  
+          </View>
           <Text style={[styles.fontBold]}>Earnings</Text>
-          <Text style={[styles.fontBold, styles.paddingTop15]}>Payout Date</Text>
+          <View style={[styles.textAndImage]}>
+            <Feather style={[styles.infoIcon]} name="info" size={15} color="black"/>
+            <Text style={[styles.fontBold, styles.paddingTop15]}>Payout Date</Text>
+          </View>
+          
         </View>
 
         {/* Right Column */}
-        <View style={[styles.detailsInfoRight]}>
-          <Text>August 5th, 2025</Text>
-          <View style={[styles.textAndImage]}>
-
-            <Image />
-
-            <Text style={[styles.underline, styles.paddingTop15]}>Directions</Text>
+        <View style={[styles.detailsInfoRight, styles.textAlignR]}>
+          <Text style={[styles.textAlignR]}>August 5th, 2025</Text>
+          
+          <View style={[styles.textAndImage, styles.justifyContentE, styles.paddingTop25]}>
+            <EvilIcons style={[styles.paddingTop10]} name="location" size={24} color="black"/>
+            <Text style={[styles.underline, styles.paddingTop15, styles.textAlignR ]}>Directions</Text>
           </View>
           
-          <Text style={[styles.paddingTop80]}>07:00 am</Text>
-          <Text>13:00 pm</Text>
-          <Text style={[styles.underline, styles.paddingTop15]}>52 +1 998 151 7878</Text>
-          <Text style={[styles.paddingTop15]}>$1050.00 USD</Text>
-          <Text>($21,560.00 MX)</Text>
-          <Text style={[styles.paddingTop15]}>December 12th, 2024</Text>
+          <Text style={[styles.paddingTop60, styles.textAlignR]}>07:00 am</Text>
+          <Text style={[styles.textAlignR]}>13:00 pm</Text>
+          <Text style={[styles.underline, styles.paddingTop15, styles.textAlignR]}>52 +1 998 151 7878</Text>
+          <Text style={[styles.paddingTop15, styles.textAlignR]}>$1050.00 USD</Text>
+          <Text style={[styles.textAlignR]}>($21,560.00 MX)</Text>
+          <Text style={[styles.paddingTop15, styles.textAlignR]}>December 12th, 2024</Text>
         </View>
       </View>
 
       {/* Bottom Row */}
-      <View style={[styles.messagebtn]}>
-        <Text>btn</Text>
+      <View style={[styles.btnBottom]}>
+        <TouchableOpacity></TouchableOpacity>
+
       </View>
     </SafeAreaView>
   );
