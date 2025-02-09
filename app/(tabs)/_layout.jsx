@@ -58,6 +58,17 @@ export default function TabLayout() {
           ),
         }}
       />
+
+      <Tabs.Screen
+        name="sofiaScreen"
+        options={{
+          headerShown: false,
+          tabBarLabel: () => false,
+          tabBarIcon: () => (
+            <FontAwesome5 name="user-circle" size={24} color="#59534C" />
+          ),
+        }}
+      />
     </Tabs>
   );
 }
