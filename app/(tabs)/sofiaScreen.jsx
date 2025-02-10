@@ -4,115 +4,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Feather from '@expo/vector-icons/Feather';
 import EvilIcons from '@expo/vector-icons/EvilIcons';
 
-const styles = StyleSheet.create({
-    button: {
-    width: 200,   // Set button width
-    height: 60,   // Set button height
-    backgroundColor: 'blue',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 10, // Optional: for rounded corners
-  },
-  text: {
-    color: 'white',
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-  container: {
-    flex: 1,
-    borderColor: 'red',
-    borderWidth: 0,
-  },
-  details: {
-    flex: 5,
-    flexDirection: 'row',
-    borderColor: 'red',
-    borderWidth: 0,
-  },
-  detailsInfoLeft: {
-    flex: .8,
-    flexDirection: 'column',
-    borderColor: 'green',
-    borderWidth: 0,
-    paddingLeft: 30,
-    marginLeft: 10,
-  },
-  detailsInfoRight: {
-    flex: 1,
-    flexDirection: 'column',
-    borderColor: 'red',
-    borderWidth: 0,
-    marginLeft: 0,
-    marginRight: 30,
-    paddingRight: 30,
-  },
-  textAndImage: {
-    flexDirection: 'row',
-    borderColor: 'purple',
-    borderWidth: 0,
-  },
-  textAlignR: {
-    textAlign: 'right',
-  },
-  justifyContentE: {
-    justifyContent: 'flex-end',
-  },
-  btnBottom: {
-    borderColor: 'red',
-    borderWidth: 1,
-    width: 220,   // Set button width
-    height: 35,   // Set button height
-    marginLeft: '25%',
-    justifyContent: 'center',
-    borderRadius: 10,
-    overflow: 'hidden', // Needed for borderRadius to work
-  },
-  image1: {
-    width: '100%',
-    height: 270,
-  },
-  infoIcon: {
-    position: 'absolute',
-    left: -20,
-    top: 17,
-  },
-  upcoming: {
-    textAlign: 'center',
-    paddingTop: 20,
-    fontFamily: 'Aboreto-Regular',
-  },
-  firstName: {
-    textAlign: 'center',
-    fontSize: 40,
-    fontFamily: 'Aboreto-Regular',
-    borderColor: 'blue',
-    borderWidth: 0,
-  },
-  fontBold: {
-    fontWeight: 'bold',
-  },
-  paddingTop15: {
-    paddingTop: 15,
-  },
-  paddingTop25: {
-    paddingTop: 25,
-  },
-  paddingTop10: {
-    paddingTop: 10,
-  },
-  paddingTop60: {
-    marginTop: 60,
-  },
-  underline: {
-    textDecorationLine: 'underline',
-  },
-  aboreto: {
-    fontFamily: Platform.select({
-      android: 'Aboreto-Regular',
-    }),
-  },
-})
-
 export default function SofiaScreen() {
   return (
     <SafeAreaView style={[styles.container]}>
@@ -170,10 +61,114 @@ export default function SofiaScreen() {
       </View>
 
       {/* Bottom Row */}
-      <View style={[styles.btnBottom]}>
-        <TouchableOpacity></TouchableOpacity>
-
-      </View>
+        <TouchableOpacity
+          style={[
+            {
+              alignItems: 'center',
+            },
+            styles.button_style,
+          ]}
+        >
+          <Text
+            style={{
+              color: "#FFFFFF",
+              fontSize: 18,
+              fontWeight: 700,
+            }}
+          >
+            Message
+          </Text>
+        </TouchableOpacity>
     </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  button_style: {
+    marginBottom: 20,
+    justifyContent: 'center',
+    width: 256,
+    height: 50,
+    backgroundColor: "#59534C",
+    borderRadius: 8,
+  },
+  text: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  container: {
+    flex: 1,
+    alignItems: "center",
+  },
+  details: {
+    flex: 5,
+    flexDirection: 'row',
+  },
+  detailsInfoLeft: {
+    flex: .8,
+    flexDirection: 'column',
+    paddingLeft: 30,
+    marginLeft: 10,
+  },
+  detailsInfoRight: {
+    flex: 1,
+    flexDirection: 'column',
+    borderWidth: 0,
+    marginLeft: 0,
+    marginRight: 30,
+    paddingRight: 30,
+  },
+  textAndImage: {
+    flexDirection: 'row',
+  },
+  textAlignR: {
+    textAlign: 'right',
+  },
+  justifyContentE: {
+    justifyContent: 'flex-end',
+  },
+  image1: {
+    height: 270,
+  },
+  infoIcon: {
+    position: 'absolute',
+    left: -20,
+    top: 17,
+  },
+  upcoming: {
+    textAlign: 'center',
+    paddingTop: 20,
+    fontFamily: 'Aboreto-Regular',
+  },
+  firstName: {
+    textAlign: 'center',
+    fontSize: 40,
+    fontFamily: 'Aboreto-Regular',
+    borderColor: 'blue',
+    borderWidth: 0,
+  },
+  fontBold: {
+    fontWeight: 'bold',
+  },
+  paddingTop15: {
+    paddingTop: 15,
+  },
+  paddingTop25: {
+    paddingTop: 25,
+  },
+  paddingTop10: {
+    paddingTop: 10,
+  },
+  paddingTop60: {
+    marginTop: 60,
+  },
+  underline: {
+    textDecorationLine: 'underline',
+  },
+  aboreto: {
+    fontFamily: Platform.select({
+      android: 'Aboreto-Regular',
+    }),
+  },
+})
