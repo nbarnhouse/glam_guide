@@ -2,7 +2,7 @@
   "expo": {
     "name": "GlamGuide",
     "slug": "glam_guide",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/GLM_logo.png",
     "version": "1.0.0",
     "orientation": "portrait",
     "scheme": "myapp",
@@ -11,9 +11,9 @@
     "ios": {
       "supportsTablet": true,
       "icon": {
-        "dark": "./assets/images/icon.png",
-        "light": "./assets/images/icon.png",
-        "tinted": "./assets/images/icon.png"
+        "dark": "./assets/images/GLM_logo.png",
+        "light": "./assets/images/GLM_logo.png",
+        "tinted": "./assets/images/GLM_logo.png"
       },
       "bundleIdentifier": "n1",
       "infoPlist": {
@@ -38,12 +38,12 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/icon.png",
+          "image": "./assets/images/GLM_logo.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff",
           "dark": {
-            "image": "./assets/images/icon.png",
+            "image": "./assets/images/GLM_logo.png",
             "backgroundColor": "#000000"
           }
         }

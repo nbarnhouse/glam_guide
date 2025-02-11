@@ -61,7 +61,7 @@ Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped u
 
 ## Team
 
-- Chad David
+- Chad Novak
 - Jennifer Her
 - Nicole Barnhouse
 - Shobha Chejara
