@@ -48,7 +48,14 @@
           }
         }
       ],
-      "expo-localization"
+      "expo-localization",
+      "expo-build-properties",
+      [
+      "expo-font",
+        {
+          "fonts": ["node_modules/@expo-google-fonts/inter/Aboreto-Regular.ttf"]
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
