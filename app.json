@@ -1,21 +1,32 @@
 {
   "expo": {
-    "name": "glam_guide",
+    "name": "GlamGuide",
     "slug": "glam_guide",
+    "icon": "./assets/images/GLM_logo.png",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "icon": {
+        "dark": "./assets/images/GLM_logo.png",
+        "light": "./assets/images/GLM_logo.png",
+        "tinted": "./assets/images/GLM_logo.png"
+      },
+      "bundleIdentifier": "n1",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/icon.png",
+        "monochromeImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.nbarnhouse.glam_guide"
     },
     "web": {
       "bundler": "metro",
@@ -27,10 +38,14 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/images/GLM_logo.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#ffffff",
+          "dark": {
+            "image": "./assets/images/GLM_logo.png",
+            "backgroundColor": "#000000"
+          }
         }
       ],
       "expo-localization",
@@ -44,6 +59,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "ef852fa0-d227-4e3f-aa77-4b5b85304d14"
+      }
     }
   }
 }
