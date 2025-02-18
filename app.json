@@ -37,13 +37,15 @@
       "expo-localization",
       "expo-build-properties",
       [
-      "expo-font",
+        "expo-font",
         {
-          "fonts": ["node_modules/@expo-google-fonts/inter/Aboreto-Regular.ttf"]
+          "fonts": [
+            "node_modules/@expo-google-fonts/inter/Aboreto-Regular.ttf"
+          ]
         }
       ],
       [
-      "@react-native-google-signin/google-signin",
+        "@react-native-google-signin/google-signin",
         {
           "iosUrlScheme": "com.googleusercontent.apps._some_id_here_"
         }
@@ -51,6 +53,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "a021b3a3-e2ff-438b-b6e3-82ed801e9a5b"
+      }
     }
   }
 }
