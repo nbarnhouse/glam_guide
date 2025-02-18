@@ -10,6 +10,11 @@ import {
 import { Link, useRouter } from "expo-router";
 import LoginFields from "@/components/LoginFields";
 import i18n from "@/language/i18n";
+import {
+  GoogleSignin,
+  GoogleSigninButton,
+  statusCodes,
+} from '@react-native-google-signin/google-signin';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
