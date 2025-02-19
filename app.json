@@ -9,7 +9,8 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.glam-guide"
     },
     "android": {
       "adaptiveIcon": {
@@ -48,7 +49,7 @@
       [
         "@react-native-google-signin/google-signin",
         {
-          "iosUrlScheme": "com.googleusercontent.apps._some_id_here_"
+          "iosUrlScheme": "com.googleusercontent.apps.1040286814755-ge9q4rufrd144br0vfih4jlql44tmbjn"
         }
       ]
     ],
