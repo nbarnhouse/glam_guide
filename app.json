@@ -16,7 +16,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "glam-guide"
+      "package": "com.glam_guide"
     },
     "web": {
       "bundler": "metro",
