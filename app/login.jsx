@@ -16,6 +16,14 @@ import {
   statusCodes,
 } from '@react-native-google-signin/google-signin';
 
+GoogleSignin.configure({
+  webClientId: web,
+  scopes: ['https://www.googleapis.com/auth/drive.readonly'],
+  offlineAccess: true,
+  forceCodeForRefreshToken: true,
+  iosClientId: ios,
+});
+
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
