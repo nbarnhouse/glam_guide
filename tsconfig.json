@@ -15,6 +15,6 @@
     "app/_layout.jsx",
     "app/index.jsx",
     "app/sign-up.jsx",
-    "app/login.jsx"
+    "app/login.jsx",
   ]
 }
