@@ -92,6 +92,13 @@ const LoginScreen = () => {
           Login
         </Text>
       </TouchableOpacity>
+
+      {/* Google Sign In Button */}
+      <GoogleSigninButton
+        size={GoogleSigninButton.Size.Wide}
+        color={GoogleSigninButton.Color.Dark}
+      />
+
       {/* NOTE: Need to update this text with libre Translation API details */}
       <Text style={{ marginTop: -20 }}>Auto Translation: Off</Text>
       <Link href="/sign-up">
