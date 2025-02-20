@@ -15,14 +15,15 @@ import {
   GoogleSigninButton,
   statusCodes,
 } from '@react-native-google-signin/google-signin';
+import { WEB_CLIENT_ID, IOS_CLIENT_ID } from "./../keys";
 
-// GoogleSignin.configure({
-//   webClientId: web,
-//   scopes: ['https://www.googleapis.com/auth/drive.readonly'],
-//   offlineAccess: true,
-//   forceCodeForRefreshToken: true,
-//   iosClientId: ios,
-// });
+GoogleSignin.configure({
+  webClientId: WEB_CLIENT_ID,
+  scopes: ['https://www.googleapis.com/auth/drive.readonly'],
+  offlineAccess: true,
+  forceCodeForRefreshToken: true,
+  iosClientId: IOS_CLIENT_ID,
+});
 
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
