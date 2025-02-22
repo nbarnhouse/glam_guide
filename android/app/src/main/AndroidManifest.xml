@@ -26,6 +26,7 @@
         <category android:name="android.intent.category.BROWSABLE"/>
         <data android:scheme="myapp"/>
         <data android:scheme="com.glam_guide"/>
+        <data android:scheme="exp+glamguide"/>
       </intent-filter>
     </activity>
   </application>

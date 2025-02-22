@@ -1,6 +1,7 @@
 import { Stack, useRouter } from "expo-router";
 import { TouchableOpacity, Text } from "react-native";
 import { useEffect } from "react";
+import 'expo-dev-client';
 
 export default function RootLayout() {
   const router = useRouter();

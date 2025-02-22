@@ -34,6 +34,12 @@
       <dict>
         <key>CFBundleURLSchemes</key>
         <array>
+          <string>exp+glamguide</string>
+        </array>
+      </dict>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
           <string>com.googleusercontent.apps.1040286814755-ge9q4rufrd144br0vfih4jlql44tmbjn</string>
         </array>
       </dict>
