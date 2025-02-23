@@ -16,6 +16,7 @@ import {
   statusCodes,
 } from '@react-native-google-signin/google-signin';
 import { WEB_CLIENT_ID, IOS_CLIENT_ID } from "./../keys";
+import { signIn } from "@/components/signin";
 
 GoogleSignin.configure({
   webClientId: "1040286814755-jti1t0uis82ctifh5b7m9348q6704pba.apps.googleusercontent.com",
@@ -97,6 +98,7 @@ const LoginScreen = () => {
       <GoogleSigninButton
         size={GoogleSigninButton.Size.Wide}
         color={GoogleSigninButton.Color.Dark}
+        onPress={signIn}
       />
 
       {/* NOTE: Need to update this text with libre Translation API details */}
