@@ -14,8 +14,8 @@
 		96905EF65AED1B983A6B3ABC /* libPods-glamguide.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-glamguide.a */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
-		D54CD02631ED488E945DA630 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA597DC43FE7425AB5F9DD56 /* noop-file.swift */; };
-		107B35312E024353B1B66D47 /* Aboreto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECC27F134D4C43E28C190B4E /* Aboreto-Regular.ttf */; };
+		03D5916EA3644ED898CDD41D /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120DE2F05FAB4C649557BFC8 /* noop-file.swift */; };
+		AA3B18A1EECF401A84E5DE27 /* Aboreto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 373C70386C1F48C6AEAABEE2 /* Aboreto-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,9 +32,9 @@
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-glamguide/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
-		EA597DC43FE7425AB5F9DD56 /* noop-file.swift */ = {isa = PBXFileReference; name = "noop-file.swift"; path = "glamguide/noop-file.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
-		E0F874B99EF342F68F56BF34 /* glamguide-Bridging-Header.h */ = {isa = PBXFileReference; name = "glamguide-Bridging-Header.h"; path = "glamguide/glamguide-Bridging-Header.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		ECC27F134D4C43E28C190B4E /* Aboreto-Regular.ttf */ = {isa = PBXFileReference; name = "Aboreto-Regular.ttf"; path = "../node_modules/@expo-google-fonts/inter/Aboreto-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		120DE2F05FAB4C649557BFC8 /* noop-file.swift */ = {isa = PBXFileReference; name = "noop-file.swift"; path = "glamguide/noop-file.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		66B6AE06303A42B5958B2CFD /* glamguide-Bridging-Header.h */ = {isa = PBXFileReference; name = "glamguide-Bridging-Header.h"; path = "glamguide/glamguide-Bridging-Header.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		373C70386C1F48C6AEAABEE2 /* Aboreto-Regular.ttf */ = {isa = PBXFileReference; name = "Aboreto-Regular.ttf"; path = "../node_modules/@expo-google-fonts/inter/Aboreto-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +59,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
-				EA597DC43FE7425AB5F9DD56 /* noop-file.swift */,
-				E0F874B99EF342F68F56BF34 /* glamguide-Bridging-Header.h */,
+				120DE2F05FAB4C649557BFC8 /* noop-file.swift */,
+				66B6AE06303A42B5958B2CFD /* glamguide-Bridging-Header.h */,
 			);
 			name = glamguide;
 			sourceTree = "<group>";
@@ -90,7 +90,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D65327D7A22EEC0BE12398D9 /* Pods */,
 				D7E4C46ADA2E9064B798F356 /* ExpoModulesProviders */,
-				5DBBF74922FE47A99D12DD09 /* Resources */,
+				7AC531F2E56C4DF8BE43444B /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -139,10 +139,10 @@
 			name = ExpoModulesProviders;
 			sourceTree = "<group>";
 		};
-		5DBBF74922FE47A99D12DD09 /* Resources */ = {
+		7AC531F2E56C4DF8BE43444B /* Resources */ = {
 			isa = "PBXGroup";
 			children = (
-				ECC27F134D4C43E28C190B4E /* Aboreto-Regular.ttf */,
+				373C70386C1F48C6AEAABEE2 /* Aboreto-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -210,8 +210,8 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				2ADBA29101004606BD0B2CCD /* glamguide-Bridging-Header.h in Resources */,
-				107B35312E024353B1B66D47 /* Aboreto-Regular.ttf in Resources */,
+				F88775E1E1EF43E8B67E9570 /* glamguide-Bridging-Header.h in Resources */,
+				AA3B18A1EECF401A84E5DE27 /* Aboreto-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +287,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
-				D54CD02631ED488E945DA630 /* noop-file.swift in Sources */,
+				03D5916EA3644ED898CDD41D /* noop-file.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

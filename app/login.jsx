@@ -18,7 +18,7 @@ import {
 import { WEB_CLIENT_ID, IOS_CLIENT_ID } from "./../keys";
 
 GoogleSignin.configure({
-  webClientId: WEB_CLIENT_ID,
+  webClientId: "1040286814755-jti1t0uis82ctifh5b7m9348q6704pba.apps.googleusercontent.com",
   scopes: ['https://www.googleapis.com/auth/drive.readonly'],
   offlineAccess: true,
   forceCodeForRefreshToken: true,
