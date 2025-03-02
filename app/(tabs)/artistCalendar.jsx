@@ -70,7 +70,9 @@ const ArtistCalendar = () => {
             Today
           </Text>
           <View style={styles.calendar}>
-            <Text>Natalia</Text>
+            <Text marginLeft={10}>
+              Natalia
+            </Text>
           </View>
           <Text
             style={{
