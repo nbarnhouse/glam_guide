@@ -25,8 +25,8 @@ const ArtistCalendar = () => {
       {/* Top Container */}
       <View style={styles.containerTop}>
         <ScrollView
-          stickyHeaderIndices={[20]}
-          showsVerticalScrollIndicator={true}
+          stickyHeaderIndices={[2]}
+          showsVerticalScrollIndicator={false}
         >
           <View
             style={{
@@ -77,6 +77,32 @@ const ArtistCalendar = () => {
             >
               Natalia Rocio Flores-Silva
             </Text>
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                flex: 2,
+                borderColor: 'blue',
+                borderWidth: 1,
+              }}
+            >
+              <Text>
+                RIU Palace Kukulkan
+              </Text>
+              <View>
+                <Text
+                  style={{
+                    fontSize: 10,
+                  }}
+                >
+                  Your Arrival Time
+                </Text>
+                <Text>
+                  Your Arrival Time
+                </Text>
+              </View>
+            </View>
+            
           </View>
           <Text
             style={{
