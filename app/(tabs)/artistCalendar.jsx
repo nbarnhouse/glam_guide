@@ -25,7 +25,7 @@ const ArtistCalendar = () => {
       {/* Top Container */}
       <View style={styles.containerTop}>
         <ScrollView
-          stickyHeaderIndices={[7]}
+          stickyHeaderIndices={[20]}
           showsVerticalScrollIndicator={true}
         >
           <View
@@ -70,8 +70,12 @@ const ArtistCalendar = () => {
             Today
           </Text>
           <View style={styles.calendar}>
-            <Text marginLeft={10}>
-              Natalia
+            <Text
+              style={{
+                fontWeight: 700,
+              }}
+            >
+              Natalia Rocio Flores-Silva
             </Text>
           </View>
           <Text
@@ -120,6 +124,7 @@ const styles = StyleSheet.create({
   calendar: {
     borderColor: 'grey',
     borderWidth: 1,
+    padding: 10,
   },
 });
 
