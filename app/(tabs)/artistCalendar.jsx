@@ -48,7 +48,6 @@ const ArtistCalendar = () => {
             </Text>
           </View>
           
-
           <Text
             style={{
               fontWeight: '700',
@@ -60,6 +59,27 @@ const ArtistCalendar = () => {
           </Text>
           <Text>
             Welcome back, Suah!
+          </Text>
+          <Text
+            style={{
+              paddingTop: 10,
+              color: '#8C5627',
+              fontWeight: 700,
+              paddingLeft: 10,
+            }}>
+            Today
+          </Text>
+          <View style={styles.calendar}>
+            <Text>Natalia</Text>
+          </View>
+          <Text
+            style={{
+              // paddingTop: 10,
+              color: '#8C5627',
+              fontWeight: 700,
+              paddingLeft: 10,
+            }}>
+            Upcoming
           </Text>
           <FontAwesome6 name="sliders" size={24} color="black"
             style={{
@@ -93,6 +113,10 @@ const styles = StyleSheet.create({
   containerBottom: {
     flex: 3,
     borderColor: 'red',
+    borderWidth: 1,
+  },
+  calendar: {
+    borderColor: 'grey',
     borderWidth: 1,
   },
 });
