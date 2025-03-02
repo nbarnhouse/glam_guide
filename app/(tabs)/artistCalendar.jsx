@@ -10,6 +10,7 @@ import {
 } from "react-native";
 import React from "react";
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { getRelativeCoords } from "react-native-reanimated";
 
 const ArtistCalendar = () => {
@@ -27,17 +28,27 @@ const ArtistCalendar = () => {
           stickyHeaderIndices={[7]}
           showsVerticalScrollIndicator={true}
         >
-          <Text
+          <View
             style={{
-              fontWeight: '150',
-              color: 'grey',
-              fontSize: 18,
-              marginTop: 5,
-              alignSelf: 'center',
-            }}
-          >
-            Translation: On
-          </Text>
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <MaterialIcons name="translate" size={20} color="grey" alignItems='bottom' marginTop={5}/>
+            <Text
+              style={{
+                fontWeight: '150',
+                color: 'grey',
+                fontSize: 18,
+                marginTop: 5,
+                alignSelf: 'center',
+              }}
+            >
+              Translation: On
+            </Text>
+          </View>
+          
+
           <Text
             style={{
               fontWeight: '700',
