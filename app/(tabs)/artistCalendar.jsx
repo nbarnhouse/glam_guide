@@ -7,21 +7,34 @@ import {
   Alert,
 } from "react-native";
 import React from "react";
+import { getRelativeCoords } from "react-native-reanimated";
 
 const ArtistCalendar = () => {
   return (
     <SafeAreaView
       style={{
         flex: 1, 
-        alignItems: "center",
+        paddingLeft: 20,
+        paddingRight: 20,
       }}
     >
-      <View style={styles.containerTop}>
+      {/* Top Container */}
+      <View
+        style={styles.containerTop}>
+        <Text
+          style={{
+            fontWeight: '700',
+            fontSize: 18,
+          }}
+        >
+          Calendar
+        </Text>
         <Text>
-          dfsddfghfdgjhdfgjfdj
+          Welcome back, Suah!
         </Text>
       </View>
 
+      {/* Bottom Container */}
       <View style={styles.containerBottom}>
         <Text>
           dfsd
@@ -37,6 +50,7 @@ const styles = StyleSheet.create({
     flex: 1,
     borderColor: 'red',
     borderWidth: 1,
+    position: 'relative',
   },
   containerBottom: {
     flex: 3,
