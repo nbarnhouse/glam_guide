@@ -9,6 +9,7 @@ import {
   StatusBar,
 } from "react-native";
 import React from "react";
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import { getRelativeCoords } from "react-native-reanimated";
 
 const ArtistCalendar = () => {
@@ -23,13 +24,25 @@ const ArtistCalendar = () => {
       {/* Top Container */}
       <View style={styles.containerTop}>
         <ScrollView
-          stickyHeaderIndices={[1]}
+          stickyHeaderIndices={[7]}
           showsVerticalScrollIndicator={true}
         >
           <Text
             style={{
+              fontWeight: '150',
+              color: 'grey',
+              fontSize: 18,
+              marginTop: 5,
+              alignSelf: 'center',
+            }}
+          >
+            Translation: On
+          </Text>
+          <Text
+            style={{
               fontWeight: '700',
               fontSize: 18,
+              marginTop: 5,
             }}
           >
             Calendar
@@ -37,6 +50,12 @@ const ArtistCalendar = () => {
           <Text>
             Welcome back, Suah!
           </Text>
+          <FontAwesome6 name="sliders" size={24} color="black"
+            style={{
+              position: 'absolute',
+              right: 0,
+            }}
+          />
         </ScrollView>  
       </View>
 
