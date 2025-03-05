@@ -86,7 +86,7 @@ const ArtistCalendar = () => {
                 borderWidth: 1,
               }}
             >
-              <Text>
+              <Text style={{textAlignVertical: 'bottom'}}>
                 RIU Palace Kukulkan
               </Text>
               <View>
