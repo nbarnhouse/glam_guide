@@ -11,7 +11,7 @@ import {
 import React from "react";
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import { getRelativeCoords } from "react-native-reanimated";
+import Octicons from '@expo/vector-icons/Octicons';
 
 const ArtistCalendar = () => {
   return (
@@ -93,13 +93,23 @@ const ArtistCalendar = () => {
                 <Text
                   style={{
                     fontSize: 10,
+                    textAlign: 'center',
                   }}
                 >
                   Your Arrival Time
                 </Text>
-                <Text>
-                  Your Arrival Time
-                </Text>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    borderColor: 'green',
+                    borderWidth: 1,
+                  }}
+                >
+                  <Octicons name="location" size={18} color="black" marginRight={15} />
+                  <Text>
+                    Your Arrival Time
+                  </Text>
+                </View>
               </View>
             </View>
             
