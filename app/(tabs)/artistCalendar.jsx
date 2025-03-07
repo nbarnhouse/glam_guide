@@ -14,6 +14,27 @@ import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import Octicons from '@expo/vector-icons/Octicons';
 
 const ArtistCalendar = () => {
+  const users = [
+    {
+      id: 1,
+      name: "Harper Collins",
+      place: "Bahia Principle Grand",
+      time: "06:00 am",
+    },
+    {
+      id: 2,
+      name: "Charlotte Brown",
+      place: "The Pyramid Cancun",
+      time: "07:15 am",
+    },
+    {
+      id: 3,
+      name: "Aria Clark",
+      place: "Zoey Walker",
+      time: "07:00 am"
+    }  
+  ]
+
   return (
     <SafeAreaView
       style={{
@@ -114,12 +135,10 @@ const ArtistCalendar = () => {
                 </View>
               </View>
             </View>
-            
           </View>
           {/* Calendar Container Above */}
           <Text
             style={{
-              // paddingTop: 10,
               color: '#8C5627',
               fontWeight: 700,
               paddingLeft: 10,
@@ -138,9 +157,55 @@ const ArtistCalendar = () => {
       {/* Bottom Container */}
       <View style={styles.containerBottom}>
         <ScrollView>
-          <Text style={{fontSize: 35}}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </Text>
+          {
+            users.map((poop) =>
+              <View style={styles.calendar}>
+                <Text
+                  style={{
+                    fontWeight: 700,
+                  }}
+                >
+                  Natalia Rocio Flores-Silva
+                </Text>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    flex: 2,
+                    // borderColor: 'blue',
+                    // borderWidth: 1,
+                  }}
+                >
+                  <Text style={{textAlignVertical: 'bottom'}}>
+                    RIU Palace Kukulkan
+                  </Text>
+                  <View>
+                    <Text
+                      style={{
+                        fontSize: 10,
+                        textAlign: 'center',
+                      }}
+                    >
+                      Your Arrival Time
+                    </Text>
+                    <View
+                      style={{
+                        flexDirection: 'row',
+                        // borderColor: 'green',
+                        // borderWidth: 1,
+                      }}
+                    >
+                      <Octicons name="location" size={18} color="black" marginRight={15} />
+                      <Text>
+                        Your Arrival Time
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            
+            )
+          }
         </ScrollView>
       </View>
 
@@ -161,6 +226,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   calendar: {
+    marginTop: 5,
     borderColor: 'grey',
     borderWidth: 1,
     borderRadius: 10,
