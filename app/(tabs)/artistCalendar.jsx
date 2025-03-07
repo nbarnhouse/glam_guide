@@ -96,6 +96,7 @@ const ArtistCalendar = () => {
             <Text
               style={{
                 fontWeight: 700,
+                fontSize: 15,
               }}
             >
               Natalia Rocio Flores-Silva
@@ -104,19 +105,22 @@ const ArtistCalendar = () => {
               style={{
                 flexDirection: 'row',
                 justifyContent: 'space-between',
-                flex: 2,
                 // borderColor: 'blue',
                 // borderWidth: 1,
               }}
             >
-              <Text style={{textAlignVertical: 'bottom'}}>
+              <Text style={{
+                textAlignVertical: 'bottom',
+                fontSize: 15,
+              }}
+              >
                 RIU Palace Kukulkan
               </Text>
               <View>
                 <Text
                   style={{
                     fontSize: 10,
-                    textAlign: 'center',
+                    marginLeft: 30,
                   }}
                 >
                   Your Arrival Time
@@ -126,11 +130,16 @@ const ArtistCalendar = () => {
                     flexDirection: 'row',
                     // borderColor: 'green',
                     // borderWidth: 1,
+                    marginTop: -4,
                   }}
                 >
-                  <Octicons name="location" size={18} color="black" marginRight={15} />
-                  <Text>
-                    Your Arrival Time
+                  <Octicons name="location" size={18} color="black" marginRight={15} marginTop={3} />
+                  <Text
+                    style={{
+                      fontSize: 20,
+                    }}
+                  >
+                    07:00 am
                   </Text>
                 </View>
               </View>
@@ -158,14 +167,14 @@ const ArtistCalendar = () => {
       <View style={styles.containerBottom}>
         <ScrollView>
           {
-            users.map((poop) =>
+            users.map((item) =>
               <View style={styles.calendar}>
                 <Text
                   style={{
                     fontWeight: 700,
                   }}
                 >
-                  Natalia Rocio Flores-Silva
+                  {item.name}
                 </Text>
                 <View
                   style={{
@@ -177,13 +186,18 @@ const ArtistCalendar = () => {
                   }}
                 >
                   <Text style={{textAlignVertical: 'bottom'}}>
-                    RIU Palace Kukulkan
+                    {item.place}
                   </Text>
-                  <View>
+                  <View
+                    style={{
+                        // borderColor: 'green',
+                        // borderWidth: 1,
+                      }}
+                  >
                     <Text
                       style={{
+                        marginLeft: 30,
                         fontSize: 10,
-                        textAlign: 'center',
                       }}
                     >
                       Your Arrival Time
@@ -193,11 +207,16 @@ const ArtistCalendar = () => {
                         flexDirection: 'row',
                         // borderColor: 'green',
                         // borderWidth: 1,
+                        marginTop: -4,
                       }}
                     >
-                      <Octicons name="location" size={18} color="black" marginRight={15} />
-                      <Text>
-                        Your Arrival Time
+                      <Octicons name="location" size={18} color="black" marginRight={15} marginTop={3}/>
+                      <Text
+                        style={{
+                          fontSize: 20,
+                        }}
+                      >
+                        {item.time}
                       </Text>
                     </View>
                   </View>
