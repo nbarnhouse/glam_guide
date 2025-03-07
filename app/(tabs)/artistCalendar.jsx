@@ -12,7 +12,7 @@ import React from "react";
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import Octicons from '@expo/vector-icons/Octicons';
-import {seperatorStyles} from './../../components/Seperator'
+import {Seperator} from './../../components/Seperator'
 
 const ArtistCalendar = () => {
   const users = [
@@ -84,7 +84,7 @@ const ArtistCalendar = () => {
           </Text>
           <Text
             style={{
-              paddingTop: 10,
+              paddingTop: 5,
               color: '#8C5627',
               fontWeight: 700,
               paddingLeft: 10,
@@ -152,9 +152,11 @@ const ArtistCalendar = () => {
               color: '#8C5627',
               fontWeight: 700,
               paddingLeft: 10,
+              paddingBottom: 5, 
             }}>
             Upcoming
           </Text>
+          <Seperator />
           <FontAwesome6 name="sliders" size={24} color="black"
             style={{
               position: 'absolute',

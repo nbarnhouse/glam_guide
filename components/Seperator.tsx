@@ -2,9 +2,9 @@ import { ViewStyle, View } from "react-native";
 
 
 const seperatorStyles: ViewStyle = {
-  height: 1,
-  width: '100%',
-  backgroundColor: '#ddd',
+  height: 2,
+  width: '100%', 
+  backgroundColor: '#59534C',
 };
 
 export const Seperator = () => <View style={seperatorStyles} />
