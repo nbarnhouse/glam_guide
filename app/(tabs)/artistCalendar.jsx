@@ -69,6 +69,8 @@ const ArtistCalendar = () => {
             }}>
             Today
           </Text>
+
+          {/* Calendar Container Below */}
           <View style={styles.calendar}>
             <Text
               style={{
@@ -82,8 +84,8 @@ const ArtistCalendar = () => {
                 flexDirection: 'row',
                 justifyContent: 'space-between',
                 flex: 2,
-                borderColor: 'blue',
-                borderWidth: 1,
+                // borderColor: 'blue',
+                // borderWidth: 1,
               }}
             >
               <Text style={{textAlignVertical: 'bottom'}}>
@@ -101,8 +103,8 @@ const ArtistCalendar = () => {
                 <View
                   style={{
                     flexDirection: 'row',
-                    borderColor: 'green',
-                    borderWidth: 1,
+                    // borderColor: 'green',
+                    // borderWidth: 1,
                   }}
                 >
                   <Octicons name="location" size={18} color="black" marginRight={15} />
@@ -114,6 +116,7 @@ const ArtistCalendar = () => {
             </View>
             
           </View>
+          {/* Calendar Container Above */}
           <Text
             style={{
               // paddingTop: 10,
@@ -160,6 +163,7 @@ const styles = StyleSheet.create({
   calendar: {
     borderColor: 'grey',
     borderWidth: 1,
+    borderRadius: 10,
     padding: 10,
   },
 });
