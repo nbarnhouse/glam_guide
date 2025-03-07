@@ -12,6 +12,7 @@ import React from "react";
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import Octicons from '@expo/vector-icons/Octicons';
+import {seperatorStyles} from './../../components/Seperator'
 
 const ArtistCalendar = () => {
   const users = [
@@ -235,14 +236,14 @@ const ArtistCalendar = () => {
 const styles = StyleSheet.create({
   containerTop: {
     flex: 1.1,
-    borderColor: 'red',
-    borderWidth: 1,
+    // borderColor: 'red',
+    // borderWidth: 1,
     position: 'relative',
   },
   containerBottom: {
     flex: 3,
-    borderColor: 'red',
-    borderWidth: 1,
+    // borderColor: 'red',
+    // borderWidth: 1,
   },
   calendar: {
     marginTop: 5,
