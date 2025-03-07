@@ -113,6 +113,7 @@ const ArtistCalendar = () => {
               <Text style={{
                 textAlignVertical: 'bottom',
                 fontSize: 15,
+                marginTop: -4,
               }}
               >
                 RIU Palace Kukulkan
@@ -147,6 +148,7 @@ const ArtistCalendar = () => {
             </View>
           </View>
           {/* Calendar Container Above */}
+
           <Text
             style={{
               color: '#8C5627',
@@ -188,7 +190,12 @@ const ArtistCalendar = () => {
                     // borderWidth: 1,
                   }}
                 >
-                  <Text style={{textAlignVertical: 'bottom'}}>
+                  <Text
+                    style={{
+                      textAlignVertical: 'bottom',
+                      marginTop: -4,
+                    }}
+                  >
                     {item.place}
                   </Text>
                   <View
@@ -225,7 +232,6 @@ const ArtistCalendar = () => {
                   </View>
                 </View>
               </View>
-            
             )
           }
         </ScrollView>
